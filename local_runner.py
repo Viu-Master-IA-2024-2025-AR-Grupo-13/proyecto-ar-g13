@@ -3,6 +3,7 @@ from __future__ import division
 from PIL import Image
 import numpy as np
 import gym
+import sys
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Flatten, Convolution2D, Permute, BatchNormalization
@@ -21,8 +22,8 @@ WINDOW_LENGTH = 4
 env_name = 'SpaceInvaders-v0'
 env = gym.make(env_name)
 
-np.random.seed(123)
-env.seed(123)
+#np.random.seed(123)
+#env.seed(123)
 nb_actions = env.action_space.n
 
 class AtariProcessor(Processor):
@@ -43,21 +44,29 @@ class AtariProcessor(Processor):
     
 
 model = Sequential()
+# Bloque 0 - Capa de entrada
 model.add(Permute((2, 3, 1), input_shape=(WINDOW_LENGTH,) + INPUT_SHAPE))
-model.add(Convolution2D(32, (8, 8), strides=(4, 4)))
-model.add(BatchNormalization())
-model.add(Activation('relu'))
-model.add(Convolution2D(64, (4, 4), strides=(2, 2)))
-model.add(BatchNormalization())
-model.add(Activation('relu'))
-model.add(Convolution2D(64, (3, 3), strides=(1, 1)))
-model.add(BatchNormalization())
-model.add(Activation('relu'))
+
+# Bloque 1 - Primer bloque convolucional: Detección de objetos grandes
+model.add(Convolution2D(filters=32, kernel_size=8, strides=4,
+    activation="relu", data_format="channels_first", padding="same"))
+
+# Bloque 2 - Segundo bloque convolucional: Detección de detalles finos y localizados
+model.add(Convolution2D(filters=64, kernel_size=4, strides=2,
+    activation="relu", data_format="channels_first", padding="same"))
+
+# Bloque 3 - Tercer bloque convolucional: Características visuales muy específicas
+model.add(Convolution2D(filters=64, kernel_size=3, strides=1,
+    activation="relu", data_format="channels_first", padding="same"))
+
+# Bloque 4 - Aplanado de características
 model.add(Flatten())
-model.add(Dense(512))
-model.add(Activation('relu'))
-model.add(Dense(nb_actions))
-model.add(Activation('linear'))
+
+# Bloque 5 - Capa densa intermedia
+model.add(Dense(512, activation="relu"))
+
+# Bloque 6 - Capa de salida
+model.add(Dense(nb_actions, activation="linear"))
 
 #1. Memory (Replay buffer)
 memory = SequentialMemory(limit=1000000, window_length=WINDOW_LENGTH)
@@ -76,8 +85,9 @@ dqn = DQNAgent(model=model, nb_actions=nb_actions, policy=policy,
 dqn.compile(Adam(learning_rate=0.00025), metrics=['mae'])
 
 
-final_weights = 'checkpoints/dqn3_SpaceInvaders-v0_weights_100000.h5f'
+final_weights = sys.argv[1]
 
 print('Cargando pesos...')
 dqn.load_weights(final_weights)
-dqn.test(env, nb_episodes=10, visualize=True)
+test_result = dqn.test(env, nb_episodes=100, visualize=False)
+print(np.mean(test_result.history.get('episode_reward', [])))
