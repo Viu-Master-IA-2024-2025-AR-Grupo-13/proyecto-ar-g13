@@ -89,5 +89,5 @@ final_weights = sys.argv[1]
 
 print('Cargando pesos...')
 dqn.load_weights(final_weights)
-test_result = dqn.test(env, nb_episodes=100, visualize=False)
+test_result = dqn.test(env, nb_episodes=10, visualize=True)
 print(np.mean(test_result.history.get('episode_reward', [])))
