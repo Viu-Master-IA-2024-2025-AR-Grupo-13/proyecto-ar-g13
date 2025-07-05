@@ -1,0 +1,129 @@
+>>>> TEST 0
+Testing for 10 episodes ...
+Episode 1: reward: 3.000, steps: 379
+Episode 2: reward: 2.000, steps: 384
+Episode 3: reward: 3.000, steps: 384
+Episode 4: reward: 13.000, steps: 850
+Episode 5: reward: 5.000, steps: 660
+Episode 6: reward: 19.000, steps: 1154
+Episode 7: reward: 3.000, steps: 372
+Episode 8: reward: 3.000, steps: 384
+Episode 9: reward: 7.000, steps: 677
+Episode 10: reward: 2.000, steps: 385
+
+>>>> TEST 1
+Testing for 10 episodes ...
+Episode 1: reward: 12.000, steps: 1880
+Episode 2: reward: 6.000, steps: 635
+Episode 3: reward: 8.000, steps: 821
+Episode 4: reward: 10.000, steps: 825
+Episode 5: reward: 14.000, steps: 1925
+Episode 6: reward: 11.000, steps: 867
+Episode 7: reward: 12.000, steps: 975
+Episode 8: reward: 6.000, steps: 657
+Episode 9: reward: 11.000, steps: 827
+Episode 10: reward: 14.000, steps: 1898
+
+>>>> TEST 2
+Testing for 10 episodes ...
+Episode 1: reward: 6.000, steps: 667
+Episode 2: reward: 8.000, steps: 788
+Episode 3: reward: 15.000, steps: 954
+Episode 4: reward: 17.000, steps: 1163
+Episode 5: reward: 6.000, steps: 659
+Episode 6: reward: 9.000, steps: 931
+Episode 7: reward: 6.000, steps: 677
+Episode 8: reward: 6.000, steps: 678
+Episode 9: reward: 8.000, steps: 798
+Episode 10: reward: 7.000, steps: 800
+
+>>>> TEST 3
+Testing for 10 episodes ...
+Episode 1: reward: 18.000, steps: 724
+Episode 2: reward: 11.000, steps: 595
+Episode 3: reward: 16.000, steps: 859
+Episode 4: reward: 14.000, steps: 929
+Episode 5: reward: 15.000, steps: 803
+Episode 6: reward: 14.000, steps: 824
+Episode 7: reward: 23.000, steps: 944
+Episode 8: reward: 10.000, steps: 508
+Episode 9: reward: 23.000, steps: 1121
+Episode 10: reward: 19.000, steps: 1162
+
+>>>> TEST 4
+Testing for 10 episodes ...
+Episode 1: reward: 3.000, steps: 666
+Episode 2: reward: 0.000, steps: 926
+Episode 3: reward: 1.000, steps: 685
+Episode 4: reward: 4.000, steps: 689
+Episode 5: reward: 5.000, steps: 972
+Episode 6: reward: 2.000, steps: 680
+Episode 7: reward: 0.000, steps: 925
+Episode 8: reward: 4.000, steps: 966
+Episode 9: reward: 2.000, steps: 692
+Episode 10: reward: 5.000, steps: 940
+
+>>>> TEST 5
+Testing for 10 episodes ...
+Episode 1: reward: 11.000, steps: 641
+Episode 2: reward: 10.000, steps: 676
+Episode 3: reward: 18.000, steps: 1041
+Episode 4: reward: 3.000, steps: 450
+Episode 5: reward: 9.000, steps: 688
+Episode 6: reward: 15.000, steps: 774
+Episode 7: reward: 11.000, steps: 782
+Episode 8: reward: 8.000, steps: 657
+Episode 9: reward: 34.000, steps: 1961
+Episode 10: reward: 11.000, steps: 673
+
+>>>> TEST 6
+Testing for 10 episodes ...
+Episode 1: reward: 3.000, steps: 361
+Episode 2: reward: 2.000, steps: 356
+Episode 3: reward: 4.000, steps: 373
+Episode 4: reward: 11.000, steps: 954
+Episode 5: reward: 7.000, steps: 558
+Episode 6: reward: 5.000, steps: 555
+Episode 7: reward: 3.000, steps: 367
+Episode 8: reward: 11.000, steps: 669
+Episode 9: reward: 2.000, steps: 392
+Episode 10: reward: 10.000, steps: 637
+
+>>>> TEST 7
+Testing for 10 episodes ...
+Episode 1: reward: 13.000, steps: 846
+Episode 2: reward: 8.000, steps: 781
+Episode 3: reward: 10.000, steps: 876
+Episode 4: reward: 11.000, steps: 819
+Episode 5: reward: 18.000, steps: 1096
+Episode 6: reward: 15.000, steps: 1096
+Episode 7: reward: 10.000, steps: 843
+Episode 8: reward: 12.000, steps: 843
+Episode 9: reward: 7.000, steps: 794
+Episode 10: reward: 11.000, steps: 568
+
+>>>> TEST 8
+Testing for 10 episodes ...
+Episode 1: reward: 6.000, steps: 675
+Episode 2: reward: 4.000, steps: 522
+Episode 3: reward: 15.000, steps: 965
+Episode 4: reward: 5.000, steps: 659
+Episode 5: reward: 4.000, steps: 772
+Episode 6: reward: 7.000, steps: 681
+Episode 7: reward: 9.000, steps: 952
+Episode 8: reward: 6.000, steps: 625
+Episode 9: reward: 6.000, steps: 678
+Episode 10: reward: 6.000, steps: 653
+
+>>>> TEST 9
+Testing for 10 episodes ...
+Episode 1: reward: 16.000, steps: 1005
+Episode 2: reward: 19.000, steps: 1042
+Episode 3: reward: 16.000, steps: 983
+Episode 4: reward: 12.000, steps: 834
+Episode 5: reward: 17.000, steps: 998
+Episode 6: reward: 12.000, steps: 819
+Episode 7: reward: 18.000, steps: 1013
+Episode 8: reward: 17.000, steps: 974
+Episode 9: reward: 21.000, steps: 1605
+Episode 10: reward: 12.000, steps: 829
